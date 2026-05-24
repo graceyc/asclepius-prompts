@@ -15,7 +15,8 @@ This repository contains the agent prompts used in the five experimental configu
 │   ├── main_agent_prompt.md
 │   └── acting_subagent_definitions.md
 ├── chiron_harness/               # Configuration 4: + Harness
-│   └── main_agent_prompt.md
+│   ├── main_agent_prompt.md
+│   └── proposer_prompt.md
 └── chiron_harness_skills_subagents/  # Configuration 5: Full Asclepius
     ├── main_agent_prompt.md
     ├── skills.md
@@ -37,3 +38,4 @@ This repository contains the agent prompts used in the five experimental configu
 - **`main_agent_prompt.md`** — The system prompt for the main orchestrating agent. In configurations 1–3, this is the baseline Chiron prompt. In configuration 4, it is the structured operating manual (harness). In configuration 5, it is the harness prompt adapted for multi-agent coordination.
 - **`skills.md`** — The clinical skills library containing structured treatment regimens that the agent can retrieve during patient management.
 - **`acting_subagent_definitions.md`** — Definitions and system prompts for the three acting subagents: triage-prioritizer, diagnostician, and treatment-checker.
+- **`proposer_prompt.md`** — The meta-harness prompt given to the proposer agent that iteratively evolves the operating manual. The proposer analyzes evaluation traces, identifies systematic failure patterns, and produces improved operating manual candidates. Found in `chiron_harness/` since the harness is the output of this process.
